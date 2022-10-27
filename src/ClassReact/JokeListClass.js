@@ -24,8 +24,6 @@ class JokeListClass extends React.Component {
         if (this.state.jokes.length < this.props.numJokesToGet) this.getJokes();
     }
 
-
-    ///////////////////////////////////////
     async getJokes() {
        
         try {
@@ -83,8 +81,6 @@ class JokeListClass extends React.Component {
     render() {
         let sortedJokes = [...this.state.jokes].sort((a, b) => b.votes - a.votes);
 
-
-  ///////////////////////////////////
 
 
     return (
