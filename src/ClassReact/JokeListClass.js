@@ -25,7 +25,7 @@ class JokeListClass extends React.Component {
     }
 
 
-
+    ///////////////////////////////////////
     async getJokes() {
        
         try {
@@ -57,7 +57,7 @@ class JokeListClass extends React.Component {
       }
 
       generateNewJokes() {
-        this.setState(st => ({ jokes: st.jokes.filter(j => j.locked)}));
+        this.setState(st => ({ jokes: st.jokes.filter(j => j.vote)}));
       }
 
       resetVotes() {
@@ -82,6 +82,9 @@ class JokeListClass extends React.Component {
 
     render() {
         let sortedJokes = [...this.state.jokes].sort((a, b) => b.votes - a.votes);
+
+
+  ///////////////////////////////////
 
 
     return (
